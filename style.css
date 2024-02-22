@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --text-color: hsla(240, 6%, 21%, 1);
+  --card-ligth: rgb(136, 170, 184);
+  --card-color: hsla(0, 0%, 100%, 1);
+  --card-color-hover: rgb(119, 140, 207);
+  --card-color-click: hsla(194, 97%, 31%, 1);
+  --card-color-click-hover: rgb(4, 85, 110);
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle {
+  display: none;
+}
+
+body {
+  background: var(--text-color);
+color: white;
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+}
+html.ligth #florest.click,
+html.ligth #rain.click,
+html.ligth #coffe.click,
+html.ligth #fire.click{
+
+  background-color: var(--card-color-click);
+}
+html.ligth
+#florest.click:hover,
+#rain.click:hover,
+#coffe.click:hover,
+#fire.click:hover{
+  background-color: var(--card-color-click-hover);
+} 
+
+html.ligth #cards button{
+  background-color: rgb(192, 246, 228);
+}
+html.ligth #cards button:hover{
+  background-color: aquamarine;
+}
+
+html.ligth body{
+    background-color:white;
+    color: var(--text-color);
+}
+
+html.ligth .ph-moon,
+html:not(.ligth) .ph-sun {
+  display: none;
+}
+#page {
+  max-width: 128rem;
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  place-content: center;
+}
+
+#toggle-mode {
+  font-size: 3.2rem;
+  background: none;
+  border: 0;
+  width: 3.2rem;
+  position: absolute;
+  top: 3.2rem;
+  right: 3.2rem;
+  cursor: pointer;
+}
+
+#timer {
+  margin: auto;
+}
+
+#timer span {
+  font-size: 12.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+#controls {
+  padding-top: 3rem;
+  display: flex;
+  gap: 4rem;
+}
+#controls button {
+  font-size: 4.8rem;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.row-1,
+.row-2 {
+  display: flex;
+  gap: 3.2rem;
+  padding-bottom: 3.2rem;
+  justify-content: center;
+}
+
+
+.row-1 button, .row-2 button{
+  width: 13.8rem;
+  font-size: 7rem;
+  border: 0;
+  cursor: pointer;
+  height: 15.2rem;
+  border-radius: 10%;
+}
+
+.row-1 button:hover, .row-2 button:hover{
+  background-color: var(--card-color-hover);
+}
+
+#florest.click,
+#rain.click,
+#coffe.click,
+#fire.click{
+  background-color: var(--card-color-click);
+  color: var(--card-color)
+
+}
+#florest.click:hover,
+#rain.click:hover,
+#coffe.click:hover,
+#fire.click:hover{
+  background-color: var(--card-color-click-hover);
+}
