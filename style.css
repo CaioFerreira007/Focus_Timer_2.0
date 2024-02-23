@@ -34,9 +34,9 @@ html.ligth #fire.click {
   background-color: var(--card-color-click);
 }
 html.ligth #florest.click:hover,
-#rain.click:hover,
-#coffe.click:hover,
-#fire.click:hover {
+html.ligth #rain.click:hover,
+html.ligth #coffe.click:hover,
+html.ligth #fire.click:hover {
   background-color: var(--card-color-click-hover);
 }
 
