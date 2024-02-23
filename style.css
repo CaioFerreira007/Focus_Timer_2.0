@@ -23,35 +23,33 @@ html:not(.running) .ph-stop-circle {
 
 body {
   background: var(--text-color);
-color: white;
+  color: white;
   font-size: 1.6rem;
   font-family: "Roboto", sans-serif;
 }
 html.ligth #florest.click,
 html.ligth #rain.click,
 html.ligth #coffe.click,
-html.ligth #fire.click{
-
+html.ligth #fire.click {
   background-color: var(--card-color-click);
 }
-html.ligth
-#florest.click:hover,
+html.ligth #florest.click:hover,
 #rain.click:hover,
 #coffe.click:hover,
-#fire.click:hover{
+#fire.click:hover {
   background-color: var(--card-color-click-hover);
-} 
+}
 
-html.ligth #cards button{
+html.ligth #cards button {
   background-color: rgb(192, 246, 228);
 }
-html.ligth #cards button:hover{
+html.ligth #cards button:hover {
   background-color: aquamarine;
 }
 
-html.ligth body{
-    background-color:white;
-    color: var(--text-color);
+html.ligth body {
+  background-color: white;
+  color: var(--text-color);
 }
 
 html.ligth .ph-moon,
@@ -59,7 +57,7 @@ html:not(.ligth) .ph-sun {
   display: none;
 }
 #page {
-  max-width: 128rem;
+  width: 100%;
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr;
@@ -79,13 +77,20 @@ html:not(.ligth) .ph-sun {
 }
 
 #timer {
+  max-width: 100%;
   margin: auto;
 }
 
 #timer span {
+  max-width: 100%;
+
   font-size: 12.6rem;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.clock span {
+  width: 100%;
 }
 
 #controls {
@@ -94,6 +99,8 @@ html:not(.ligth) .ph-sun {
   gap: 4rem;
 }
 #controls button {
+  width: 100%;
+
   font-size: 4.8rem;
   border: 0;
   background: none;
@@ -102,15 +109,18 @@ html:not(.ligth) .ph-sun {
 
 .row-1,
 .row-2 {
+  width: 100%;
+
   display: flex;
   gap: 3.2rem;
   padding-bottom: 3.2rem;
   justify-content: center;
 }
 
-
-.row-1 button, .row-2 button{
+.row-1 button,
+.row-2 button {
   width: 13.8rem;
+
   font-size: 7rem;
   border: 0;
   cursor: pointer;
@@ -118,21 +128,85 @@ html:not(.ligth) .ph-sun {
   border-radius: 10%;
 }
 
-.row-1 button:hover, .row-2 button:hover{
+.row-1 button:hover,
+.row-2 button:hover {
   background-color: var(--card-color-hover);
 }
 
 #florest.click,
 #rain.click,
 #coffe.click,
-#fire.click{
+#fire.click {
   background-color: var(--card-color-click);
-  color: var(--card-color)
-
+  color: var(--card-color);
 }
 #florest.click:hover,
 #rain.click:hover,
 #coffe.click:hover,
-#fire.click:hover{
+#fire.click:hover {
   background-color: var(--card-color-click-hover);
+}
+
+@media (max-width: 720px) {
+  #page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .clock {
+    width: 100%;
+
+    padding-top: 15rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ #controls{
+  padding-bottom: 7rem;
+ }
+
+  #cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 430px) {
+  #page {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+    margin: auto;
+  }
+
+  #controls{
+    padding-bottom: 7rem;
+   }
+  
+
+}
+
+
+@media(max-width:350px){
+
+  #page {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+    margin: auto;
+  }
+
+  .clock span{
+      padding-top: 20rem;
+  }
 }
